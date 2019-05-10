@@ -23,6 +23,13 @@ option | description
 
 # GET
 
+### with Authorization header
+```
+$ curl -H "Content-Type: application/json" \
+    -H "Authorization: Bearer xxxx" \
+    -X GET http://example.com/data
+```
+
 # POST
 
 ### with JSON data
@@ -75,6 +82,11 @@ $ curl -u username:password -O ftp://yourftpserver/yourfile.tar.gz
 ### Upload Files to an FTP server with or without Authentication
 ```
 $ curl -u username:password -T mylocalfile.tar.gz ftp://yourftpserver
+```
+
+### Timing Details With cURL
+```
+$ curl -w "@curl-format.txt" -o /dev/null -s "http://example.com/"
 ```
 
 ## References
